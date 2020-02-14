@@ -1,0 +1,24 @@
+.house-container{
+    width: 1000px;
+    height:250px;
+    padding: 10px;
+    background-color: rgb(198, 173, 226);
+    box-sizing:border-box;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.house-img{
+    height:200px;
+    width: 300px;
+}
+.info-container{
+    display: flex;
+}
+/* #delete-sign{
+   
+
+} */

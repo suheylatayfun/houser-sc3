@@ -8,17 +8,29 @@ zip integer
 )
 
 
-
+-- Adding info
 INSERT INTO houses
 (name,address,city,state,zip)
-VALUES('Cypress Lake','8404 warren pkwy','Frisco','TX',75034);
+VALUES('Cypress Lake','8404 warren pkwy','Frisco','TX',75034),
+      ('Lake','Eldorado','Frisco','TX',75033),
+      ('Camden','5545 preston','Plano','TX',75024);
 
+
+
+--Adding more columns
+ALTER TABLE houses
+ADD COLUMN img TEXT,
+ADD COLUMN mortgage INT,
+ADD COLUMN rent INT;
 
 INSERT INTO houses
-(name,address,city,state,zip)
+(name,address,city,state,zip,img,mortgage,rent)
 VALUES
-('Lake','Eldorado','Frisco','TX',75033),
-('Camden','5545 preston','Plano','TX',75024);
+('Lake','Eldorado','Frisco','TX',75033,'https://images.unsplash.com/photo-1498462440456-0dba182e775b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',500,5),
+('Camden','5545 preston','Plano','TX',75024,'https://images.unsplash.com/photo-1519873174361-37788c5a73c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',1000,55);
+
+
+
 
 
     "id": 3,

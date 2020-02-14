@@ -6,9 +6,12 @@ getHouses = (req,res) =>{
 }
 addHouse = (req,res)=>{
     const db = req.app.get('db');
-    const{name,address,city,state,zip} = req.body;
-    db.addHouse(name,address,city,state,zip).then(()=>{
-        res.sendStatus(200);        
+    const{name,address,city,state,zip,img,mortgage,rent} = req.body;
+    let newHouse ={name,address,city,state,zip,img,mortgage,rent};
+    db.addHouse(newHouse).then(()=>{
+        res.sendStatus(200).json(newHouse);
+    }).catch(()=>{
+        res.status(500).json('can not add house')
     })
 }
 deleteHouse = (req,res)=>{

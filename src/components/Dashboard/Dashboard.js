@@ -44,7 +44,10 @@ class Dashboard extends React.Component{
             city={el.city}
             state={el.city}
             zip={el.zip}
-            id={el.id} 
+            id={el.id}
+            img={el.img}
+            mortgage={el.mortgage}
+            rent = {el.mortgage} 
             deleteHouse ={this.deleteHouse}        
             />
             )
@@ -52,7 +55,7 @@ class Dashboard extends React.Component{
         return(
             <div>
                 <h1>Dashboard</h1>
-               <Link to="/wizard"><button>Add New Property</button></Link>
+               <Link to="/wizard/step1"><button>Add New Property</button></Link>
                 <hr/>
                 <h2>Home Listings</h2>
                 {mappedHouse}

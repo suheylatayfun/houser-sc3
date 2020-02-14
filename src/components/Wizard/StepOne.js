@@ -51,8 +51,12 @@ class StepOne extends React.Component{
         
         })
     }
+
+    saveChanges=(e)=>{
+
+    }
     render(){
-        console.log(this.state)
+        // console.log(this.state)
        
         return(
             <div>
